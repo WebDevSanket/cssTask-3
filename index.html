@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background: #293462;
+        }
+
+        body {
+            height: 100%;
+            position: fixed;
+            margin: 0 auto;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background: #FFF1C1;
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        div::before {
+            content: '';
+            height: 0;
+            width: 0;
+            border: solid;
+            border-width: 50px 0px 50px 50px;
+            border-color: transparent #FE5F55;
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            transform: rotate(-90deg);
+        }
+
+        div::after {
+            content: '';
+            height: 0;
+            width: 0;
+            border: solid;
+            border-width: 150px 0px 150px 150px;
+            border-color: transparent #FE5F55;
+            position: absolute;
+            bottom: -40%;
+            left: 40%;
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
